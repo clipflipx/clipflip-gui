@@ -1,4 +1,4 @@
-# clipflip-gui
+# Clipflip GUI
 **All-in-one package for exploiters**
 # Version 1
 This is proven to be stable on most executors, you may have issues with certain features depending on your exploit
