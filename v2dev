@@ -2,8 +2,8 @@ print("Initializing Clipflip GUI...")
 local incognito = {"incognito"}
 if not table.find(incognito, string.lower(identifyexecutor())) then
     local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
-local supported = {"solara", "codex", "arceus x", "delta", "hydrogen", "fluxus"}
-local unsupported = {"incognito", "alysse", "alysse android", "evon"}
+local supported = {"solara", "codex", "arceus x", "delta", "hydrogen", "vega x", "frost", "ethos", "alysse", "alysse android"}
+local unsupported = {"incognito", "evon", "fluxus"}
 local Window = Rayfield:CreateWindow({
    Name = "Clipflip GUI V2",
    LoadingTitle = "Clipflip GUI Development Edition",
