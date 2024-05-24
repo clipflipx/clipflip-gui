@@ -157,7 +157,7 @@ local CopyGameId = Tab3:CreateButton({
 })
 local About1 = Tab100:CreateSection("You are using Clipflip GUI v2")
 local About2 = Tab100:CreateSection("Development Edition")
-local About3 = Tab100:CreateSection("version 2.0.19 - ".. identifyexecutor())
+local About3 = Tab100:CreateSection("version 2.0.20 - ".. identifyexecutor())
 if not table.find(supported, string.lower(identifyexecutor())) then
     if not table.find(unsupported, string.lower(identifyexecutor())) then
         Rayfield:Notify({
@@ -207,7 +207,7 @@ local Section = Tab:NewSection("Executor Testing")
 local Section2 = Tab2:NewSection("Popular Scripts")
 local Section3 = Tab3:NewSection("Useful Tools")
 local Section4 = Tab4:NewSection("Made by Clipflip")
-local Section4a = Tab4:NewSection("Clipflip GUI Development Edition version 2.0.18")
+local Section4a = Tab4:NewSection("Clipflip GUI Development Edition version 2.0.20")
 local Section4d = Tab4:NewSection("Fallback Menu")
 if not table.find(supported, string.lower(identifyexecutor())) then
     if not table.find(unsupported, string.lower(identifyexecutor())) then
@@ -234,6 +234,9 @@ Section:NewButton("Vulnerability Test", "Test your executor's safety", function(
 end)
 Section2:NewButton("Infinite Yield Reborn", "Updated version of Infinite Yield with more features", function()
    loadstring(game:HttpGet("https://github.com/fuckusfm/infiniteyield-reborn/raw/master/source"))()
+end)
+Section2:NewButton("No Logging", "Anti Roblox chat logging script", function()
+   loadstring(game:httpget('https://rawscripts.net/raw/Universal-Script-NoLogging-13339'))()
 end)
 Section2:NewButton("Nameless Admin", "Simple Admin Commands Script", function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source"))()
