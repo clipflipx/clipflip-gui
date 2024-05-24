@@ -1,6 +1,6 @@
 local GameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Robojini/Tuturial_UI_Library/main/UI_Template_1"))()
-local Window = Library.CreateLib("Clipflip GUI Fallback Menu", "RJTheme6")
+local Window = Library.CreateLib("Clipflip GUI V1", "RJTheme6")
 local supported = {"solara", "codex", "arceus x", "delta", "hydrogen"}
 local unsupported = {"incognito", "fluxus", "alysse", "alysse android", "evon"}
 local solara = {"solara"}
@@ -12,14 +12,13 @@ local Section = Tab:NewSection("Executor Testing")
 local Section2 = Tab2:NewSection("Popular Scripts")
 local Section3 = Tab3:NewSection("Useful Tools")
 local Section4 = Tab4:NewSection("Made by Clipflip")
-local Section4a = Tab4:NewSection("Clipflip GUI Development Edition version 2.0.18")
-local Section4d = Tab4:NewSection("Fallback Menu")
+local Section4a = Tab4:NewSection("Clipflip GUI Stable version 1.2.17")
 if not table.find(supported, string.lower(identifyexecutor())) then
     if not table.find(unsupported, string.lower(identifyexecutor())) then
         local Section4e = Tab4:NewSection(identifyexecutor().. "is an unverified executor")
         local Section4d = Tab4:NewSection("Some features may function correctly")
     else
-        local Section4e = Tab4:NewSection(identifyexecutor().. " is an unsupported executor")
+        local Section4e = Tab4:NewSection("Your executor ".. identifyexecutor().. " is an unsupported executor")
         local Section4d = Tab4:NewSection("Some features will function correctly")
     end
 else
@@ -91,4 +90,3 @@ if not table.find(supported, string.lower(identifyexecutor())) then
 else
     print("Clipflip GUI loaded succesfully") 
 end
-    end
