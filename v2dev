@@ -59,6 +59,12 @@ local NamelessAdmin = Tab2:CreateButton({
    loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source"))()
    end,
 })
+local AntiLog = Tab2:CreateButtob({
+   Name = "No Logging",
+   Callback = function()
+   loadstring(game:httpget('https://rawscripts.net/raw/Universal-Script-NoLogging-13339'))()
+   end,
+})
 local DEX = Tab2:CreateButton({
    Name = "DEX Explorer",
    Callback = function()
