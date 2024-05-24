@@ -65,6 +65,24 @@ local DEX = Tab2:CreateButton({
    loadstring(game:HttpGet("https://raw.githubusercontent.com/infyiff/backup/main/dex.lua"))()
    end,
 })
+local Reaper = Tab2:CreateButton({
+   Name = "Reaper Hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/AyoReaper/Reaper-Hub/main/loader.lua"))()
+   end,
+})
+local Emoji = Tab2:CreateButton({
+   Name = "Emoji Chat",
+   Callback = function()
+   loadstring(game:HttpGetAsync'https://raw.githubusercontent.com/Exunys/Emoji-Chat/main/Resources/Main.lua')''
+   end,
+})
+local Krunox = Tab2:CreateButton({
+   Name = "Krunox",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastebin.com/raw/b2cnJNar"))()
+   end,
+})
 local VR = Tab2:CreateButton({
    Name = "CLOVR",
    Callback = function()
@@ -107,6 +125,18 @@ local FuckAdonis = Tab3:CreateButton({
     loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/clipflip-exploits/bypass-adonis/main/source"))()
     end,
 })
+local FakePrivateSrv = Tab3:CreateButton({
+    Name = "Teleport to a Fake Private Server",
+    Callback = function()
+    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/clipflip-exploits/fake-private-server/main/source"))()
+    end,
+})
+local AddUNC = Tab3:CreateButton({
+    Name = "Improve UNC Support",
+    Callback = function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-MoreUNC-13110"))()
+    end,
+})
 local FpsUnlock = Tab3:CreateButton({
     Name = "Unlock FPS",
     Callback = function()
@@ -121,7 +151,7 @@ local CopyGameId = Tab3:CreateButton({
 })
 local About1 = Tab100:CreateSection("You are using Clipflip GUI v2")
 local About2 = Tab100:CreateSection("Development Edition")
-local About3 = Tab100:CreateSection("version 2.0.18 - ".. identifyexecutor())
+local About3 = Tab100:CreateSection("version 2.0.19 - ".. identifyexecutor())
 if not table.find(supported, string.lower(identifyexecutor())) then
     if not table.find(unsupported, string.lower(identifyexecutor())) then
         Rayfield:Notify({
@@ -153,7 +183,7 @@ if not table.find(supported, string.lower(identifyexecutor())) then
 })
     end
 else
-    print("hello")
+    print("Welcome to Clipflip GUI v2")
 end
     else
     print("V2 GUI loading failed. Loading fallback GUI...")
@@ -214,6 +244,15 @@ end)
 Section2:NewButton("Unnamed ESP", "Basic ESP for Roblox games", function()
   loadstring(game:HttpGet('https://raw.githubusercontent.com/ic3w0lf22/Unnamed-ESP/master/UnnamedESP.lua'))()
 end)
+Section2:NewButton("Krunox", "Krunox", function()
+  loadstring(game:HttpGet("https://pastebin.com/raw/b2cnJNar"))()
+end)
+Section2:NewButton("Reaper Hub", "Reaper Hub", function()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/AyoReaper/Reaper-Hub/main/loader.lua"))()
+end)
+Section2:NewButton("Emoji Chat", "Replace text with emojis, for example :skull:", function()
+  loadstring(game:HttpGetAsync'https://raw.githubusercontent.com/Exunys/Emoji-Chat/main/Resources/Main.lua')''
+end)
 Section3:NewButton("Save Instance", "Save the game's map to your computer", function()
    saveinstance()
 end)
@@ -222,6 +261,9 @@ Section3:NewButton("Bypass Adonis", "Bypass the Adonis Anti-Cheat", function()
 end)
 Section3:NewButton("Fake Private Server", "Create a fake Private Server and teleport to it", function()
    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/clipflip-exploits/fake-private-server/main/source"))()
+end)
+Section3:NewButton("Add UNC", "Add/Imporve UNC Support", function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-MoreUNC-13110"))()
 end)
 Section2:NewButton("Thunder Client", "One of the best Arsenal scripts", function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/ThunderScriptSolutions/ThunderClientForSolara/main/ThunderClientForSolara"))()
@@ -232,9 +274,6 @@ end)
 Section3:NewButton("Unlock FPS", "Unlocks your FPS", function()
    setfpscap(1000)
    print("FPS Unlocked")
-end)
-Section3:NewSlider("Set FPS Cap", "Change your FPS Cap", 500, 10, function(s)
-    setfpscap(s)
 end)
 Section3:NewButton("Copy Game ID", "Copies your game ID to clipboard", function()
    setclipboard(game.PlaceId)
