@@ -1,13 +1,18 @@
 print("Initializing Clipflip GUI...")
 local incognito = {"incognito"}
+local solara = {"solara"}
+if not table.find(solara, string.lower(identifyexecutor())) then
+else
+    enablenilinstances()
+end
 if not table.find(incognito, string.lower(identifyexecutor())) then
     local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
-local supported = {"solara", "codex", "arceus x", "delta", "hydrogen", "vega x", "frost", "frostware", "ethos", "alysse", "alysse android"}
+local supported = {"solara", "codex", "arceus x", "delta", "hydrogen", "vega x", "frost", "frostware", "ethos", "alysse", "alysse android", "trigon evo", "trigon"}
 local unsupported = {"incognito", "evon", "fluxus"}
 local Window = Rayfield:CreateWindow({
-   Name = "Clipflip GUI V2",
-   LoadingTitle = "Clipflip GUI Development Edition",
-   LoadingSubtitle = "For testing purposes only",
+   Name = "Clipflip GUI",
+   LoadingTitle = "Clipflip GUI Beta",
+   LoadingSubtitle = "Made by Clipflip",
    ConfigurationSaving = {
       Enabled = true,
       FolderName = nil,
@@ -69,6 +74,24 @@ local DEX = Tab2:CreateButton({
    Name = "DEX Explorer",
    Callback = function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/infyiff/backup/main/dex.lua"))()
+   end,
+})
+local SysHub = Tab2:CreateButton({
+   Name = "System Hub",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/AHMEDPLPL/System-hub/main/System%20hub%20V2', true))();
+   end,
+})
+local AnimLogger = Tab2:CreateButton({
+   Name = "Animation Logger",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Animation-Logger-13175"))()
+   end,
+})
+local APIs = Tab2:CreateButton({
+   Name = "API Library",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Tropxzz/Scripts/main/apilibrary.lua",true))()
    end,
 })
 local Reaper = Tab2:CreateButton({
@@ -175,9 +198,8 @@ local CopyGameId = Tab3:CreateButton({
     setclipboard(game.PlaceId)
     end,
 })
-local About1 = Tab100:CreateSection("You are using Clipflip GUI v2")
-local About2 = Tab100:CreateSection("Development Edition")
-local About3 = Tab100:CreateSection("version 2.0.20 - ".. identifyexecutor())
+local About1 = Tab100:CreateSection("You are using Clipflip GUI Beta")
+local About3 = Tab100:CreateSection("version 2.0.22 - ".. identifyexecutor())
 if not table.find(supported, string.lower(identifyexecutor())) then
     if not table.find(unsupported, string.lower(identifyexecutor())) then
         Rayfield:Notify({
@@ -227,7 +249,7 @@ local Section = Tab:NewSection("Executor Testing")
 local Section2 = Tab2:NewSection("Popular Scripts")
 local Section3 = Tab3:NewSection("Useful Tools")
 local Section4 = Tab4:NewSection("Made by Clipflip")
-local Section4a = Tab4:NewSection("Clipflip GUI Development Edition version 2.0.20")
+local Section4a = Tab4:NewSection("Clipflip GUI Beta version 2.0.22")
 local Section4d = Tab4:NewSection("Fallback Menu")
 if not table.find(supported, string.lower(identifyexecutor())) then
     if not table.find(unsupported, string.lower(identifyexecutor())) then
@@ -261,14 +283,23 @@ end)
 Section2:NewButton("Nameless Admin", "Simple Admin Commands Script", function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source"))()
 end)
-Section2:NewButton("DEX", "Edit your game's environment like in ROBLOX Studio", function()
+Section2:NewButton("DEX Explorer", "Edit your game's environment like in ROBLOX Studio", function()
   loadstring(game:HttpGet("https://raw.githubusercontent.com/infyiff/backup/main/dex.lua"))()
+end)
+Section2:NewButton("API Libary", "API Library", function()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Tropxzz/Scripts/main/apilibrary.lua",true))()
+end)
+Section2:NewButton("System Hub", "Script Hub", function()
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/AHMEDPLPL/System-hub/main/System%20hub%20V2', true))();
 end)
 Section2:NewButton("CLOVR", "Simple VR script", function()
   loadstring(game:HttpGet("https://raw.githubusercontent.com/infyiff/backup/main/vr.lua"))()
 end)
 Section2:NewButton("Remote Spy", "Detect Remotes that are being fired", function()
   loadstring(game:HttpGetAsync("https://github.com/richie0866/remote-spy/releases/latest/download/RemoteSpy.lua"))()
+end)
+Section2:NewButton("Animation Logger", "Animation Logger", function()
+  loadstring(game:HttpGetAsync("https://rawscripts.net/raw/Universal-Script-Animation-Logger-13175"))()
 end)
 Section2:NewButton("Unnamed ESP", "Basic ESP for Roblox games", function()
   loadstring(game:HttpGet('https://raw.githubusercontent.com/ic3w0lf22/Unnamed-ESP/master/UnnamedESP.lua'))()
@@ -298,10 +329,6 @@ Section2:NewButton("Thunder Client", "One of the best Arsenal scripts", function
    loadstring(game:HttpGet("https://raw.githubusercontent.com/ThunderScriptSolutions/ThunderClientForSolara/main/ThunderClientForSolara"))()
 end)
 Section2:NewButton("Sirius", "All-in-one hub for exploiters", function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/SiriusSoftwareLTD/sirius/request/source.lua"))()
-end)
-Section2:NewButton("Verge Chat Bypasser (key copies to clipboard)", "key is &6IvM84n0TjaY!", function()
-   setclipboard("&6IvM84n0TjaY!")
    loadstring(game:HttpGet("https://raw.githubusercontent.com/SiriusSoftwareLTD/sirius/request/source.lua"))()
 end)
 Section3:NewButton("Unlock FPS", "Unlocks your FPS", function()
