@@ -62,7 +62,7 @@ local NamelessAdmin = Tab2:CreateButton({
 local AntiLog = Tab2:CreateButtob({
    Name = "No Logging",
    Callback = function()
-   loadstring(game:httpget('https://rawscripts.net/raw/Universal-Script-NoLogging-13339'))()
+   loadstring(game:HttpGet('https://rawscripts.net/raw/Universal-Script-NoLogging-13339'))()
    end,
 })
 local DEX = Tab2:CreateButton({
@@ -236,7 +236,7 @@ Section2:NewButton("Infinite Yield Reborn", "Updated version of Infinite Yield w
    loadstring(game:HttpGet("https://github.com/fuckusfm/infiniteyield-reborn/raw/master/source"))()
 end)
 Section2:NewButton("No Logging", "Anti Roblox chat logging script", function()
-   loadstring(game:httpget('https://rawscripts.net/raw/Universal-Script-NoLogging-13339'))()
+   loadstring(game:HttpGet('https://rawscripts.net/raw/Universal-Script-NoLogging-13339'))()
 end)
 Section2:NewButton("Nameless Admin", "Simple Admin Commands Script", function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source"))()
