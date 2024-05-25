@@ -59,7 +59,7 @@ local NamelessAdmin = Tab2:CreateButton({
    loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source"))()
    end,
 })
-local AntiLog = Tab2:CreateButtob({
+local AntiLog = Tab2:CreateButton({
    Name = "No Logging",
    Callback = function()
    loadstring(game:HttpGet('https://rawscripts.net/raw/Universal-Script-NoLogging-13339'))()
@@ -111,6 +111,26 @@ local Sirius = Tab2:CreateButton({
     Name = "Sirius",
     Callback = function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/SiriusSoftwareLTD/sirius/request/source.lua"))()
+    end,
+})
+local Chatbypass = Tab2:CreateButton({
+    Name = "Verge Chat Bypasser",
+    Callback = function()
+    Rayfield:Notify({
+    Title = "Clipflip GUI v2",
+    Content = "This script has a key system. Current working key is &6IvM84n0TjaY! and was copied (if supported).",
+    Duration = 10,
+    Image = 4483362458,
+    Actions = { -- Notification Buttons
+        Ignore = {
+            Name = "Okay",
+            Callback = function()
+         end
+    },
+    },
+    })
+    setclipboard("&6IvM84n0TjaY!")
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/vqmpjayZ/Bypass/main/v3rge"))()
     end,
 })
 local Thunder = Tab2:CreateButton({
@@ -278,6 +298,10 @@ Section2:NewButton("Thunder Client", "One of the best Arsenal scripts", function
    loadstring(game:HttpGet("https://raw.githubusercontent.com/ThunderScriptSolutions/ThunderClientForSolara/main/ThunderClientForSolara"))()
 end)
 Section2:NewButton("Sirius", "All-in-one hub for exploiters", function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/SiriusSoftwareLTD/sirius/request/source.lua"))()
+end)
+Section2:NewButton("Verge Chat Bypasser (key copies to clipboard)", "key is &6IvM84n0TjaY!", function()
+   setclipboard("&6IvM84n0TjaY!")
    loadstring(game:HttpGet("https://raw.githubusercontent.com/SiriusSoftwareLTD/sirius/request/source.lua"))()
 end)
 Section3:NewButton("Unlock FPS", "Unlocks your FPS", function()
