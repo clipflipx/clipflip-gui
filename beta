@@ -1,13 +1,16 @@
 print("Initializing Clipflip GUI...")
+print("Executing MoreUNC for better script support")
+loadstring(game:HttpGet('https://rawscripts.net/raw/Universal-Script-MoreUNC-13110'))()
 local incognito = {"incognito"}
 local solara = {"solara"}
+local incognitov1supportvalue = {""}
 if not table.find(solara, string.lower(identifyexecutor())) then
 else
     enablenilinstances()
 end
 if not table.find(incognito, string.lower(identifyexecutor())) then
     local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
-local supported = {"solara", "codex", "arceus x", "delta", "hydrogen", "vega x", "frost", "frostware", "ethos", "alysse", "alysse android", "trigon evo", "trigon"}
+local supported = {"solara", "codex", "arceus x", "delta", "hydrogen", "vega x", "frost", "frostware", "ethos", "alysse", "alysse android", "trigon evo", "trigon", "moreunc"}
 local unsupported = {"incognito", "evon", "fluxus"}
 local Window = Rayfield:CreateWindow({
    Name = "Clipflip GUI",
@@ -180,12 +183,6 @@ local FakePrivateSrv = Tab3:CreateButton({
     loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/clipflip-exploits/fake-private-server/main/source"))()
     end,
 })
-local AddUNC = Tab3:CreateButton({
-    Name = "Improve UNC Support",
-    Callback = function()
-    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-MoreUNC-13110"))()
-    end,
-})
 local FpsUnlock = Tab3:CreateButton({
     Name = "Unlock FPS",
     Callback = function()
@@ -321,9 +318,6 @@ Section3:NewButton("Bypass Adonis", "Bypass the Adonis Anti-Cheat", function()
 end)
 Section3:NewButton("Fake Private Server", "Create a fake Private Server and teleport to it", function()
    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/clipflip-exploits/fake-private-server/main/source"))()
-end)
-Section3:NewButton("Add UNC", "Add/Imporve UNC Support", function()
-    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-MoreUNC-13110"))()
 end)
 Section2:NewButton("Thunder Client", "One of the best Arsenal scripts", function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/ThunderScriptSolutions/ThunderClientForSolara/main/ThunderClientForSolara"))()
